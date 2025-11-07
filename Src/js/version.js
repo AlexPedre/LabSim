@@ -1,0 +1,2 @@
+const LABSIM_VER = "1.0.4.1";
+const LABSIM_COPYRIGHT = "2020-2023";

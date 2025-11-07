@@ -1,0 +1,616 @@
+
+/*******************************************
+****   LabSim - Language localization   ****
+**** (c) 2020-2025, Alessandro Pedretti ****
+*******************************************/
+
+/*
+ * To test the spoken sentences:
+ * https://mdn.github.io/web-speech-api/speak-easy-synthesis/
+ */
+
+
+/**** Localization strings ****/
+
+var Msg;
+
+if (Lang == 'it') {
+  Msg = {
+
+    /**** Analysis generator ****/
+
+    AnaBtGenerate         : "Genera",
+    AnaCsvAnalyte         : "Analita",
+    AnaCsvAnalyteID       : "Analita ID",
+    AnaCsvCode            : "Codice",
+    AnaCsvStudentID       : "Studente ID",
+    AnaFileName           : "Analisi.csv",
+    AnaErrSubstNum        : "Numero di sostanze non valido",
+    AnaLblSoluble         : "Numero sostanze solubili:",
+    AnaLblInsoluble       : "Numero sostanze insolubili:",
+    AnaLblStudents        : "Numero di studenti:",
+    AnaLoading            : "Caricamento Generatore di Analisi...",
+    AnaTitle              : "Generatore di analisi",
+
+    /**** LabSim ****/
+
+    Analyte               : "Analita",
+    BtOk                  : "Ok",
+
+    /**** About dialog ****/
+
+    DlgAboutSubTitle      : "Simulatore di Analisi Qualitativa",
+    DlgAboutRights        : "Tutti i diritti riservati",
+
+    /**** Analyte code dialog ****/
+
+    DlgAnaCodeConfirm     : "Conferma",
+    DlgAnaCodeTitle       : "Codice analita",
+
+    /**** Analyte menu ****/
+
+    DlgMenuAnaCode        : "Codice",
+    DlgMenuAnaRndAll      : "Casuale",
+    DlgMenuAnaRndInsol    : "Casuale insolubile",
+    DlgMenuAnaRndSol      : "Casuale solubile",
+    DlgMenuAnaTitle       : "Menu analita",
+
+    /**** Main menu ****/
+
+    DlgMenuAbout          : "Informazioni sul programma",
+    DlgMenuAna            : "Seleziona analita",
+    DlgMenuRestart        : "Ricomincia la simulazione",
+    DlgMenuTitle          : "Menu principale",
+
+    /**** Settings menu ****/
+
+    DlgMenuSetDetail      : "Grafica dettagliata",
+    DlgMenuSetSound       : "Effetti sonori",
+    DlgMenuSetSpeechRec   : "Riconoscimento vocale",
+    DlgMenuSetSpeechSynth : "Sintesi vocale",
+    DlgMenuSetTitle       : "Impostazioni",
+
+    Language              : "italiano",
+    Loading               : "Caricamento di LabSim...",
+    LoadingDb             : "Mi connetto al database...",
+
+    /**** Log messages ****/
+
+    LogWelcome            : "Benvenuto in LabSim\nClicca sullo schermo per vedere i video\n",
+
+    PicoTtsLanguage       : "it-IT",
+    ResponsiveVoice       : "Italian Female",
+
+    /**** Speech commands ****/
+
+    ScAbout               : "Informazioni",
+    ScAlexa               : "Alexa",
+    ScAnalyte             : "(l')analita",
+    ScBeaker              : "(il) becher",
+    ScBunsen1             : "(il) bunsen",
+    ScBunsen2             : "(la) fiamma",
+    ScBunsenOx            : "fiamma ossidante",
+    ScBunsenRed           : "fiamma riducente",
+    ScBunsenRing          : "(la) ghiera",
+    ScBunsenTap           : "(il) rubinetto (del bunsen)",
+    ScCent1Min            : "(Avvia) (la) centrifuga (per) un minuto",
+    ScCent2Min            : "(Avvia) (la) centrifuga (per) due minuti",
+    ScCent3Min            : "(Avvia) (la) centrifuga (per) tre minuti",
+    ScCent4Min            : "(Avvia) (la) centrifuga (per) quattro minuti",
+    ScCentrifuge          : "(la) centrifuga",
+    ScClose               : "Chiudi ",
+    ScCurcible            : "(la) capsula",
+    ScDropper1            : "(il) contagocce",
+    ScDropper2            : "(la) pipetta",
+    ScGoogle              : "Ok Google",
+    ScGotoCentrifuge      : "Vai (alla) centrifuga",
+    ScGotoTV              : "Vai (alla) TV",
+    ScGotoWork            : "Vai (al) banco",
+    ScEmpty1              : "Svuota (nei rifiuti)",
+    ScEmpty2              : "Butta (via)",
+    ScEmptyAll1           : "Svuota tutto",
+    ScEmptyAll2           : "Butta (via) tutto",
+    ScEmptyPaper          : "Butta (via) la cartina",
+    ScHelp                : "Aiuto",
+    ScInCentrifuge        : "nella centrifuga",
+    ScInWaterBath         : "nel bagnomaria",
+    ScLeave1              : "Lascia",
+    ScLeave2              : "Lascia ",
+    ScLight               : "(la) Luce",
+    ScLighter             : "(l')accendino",
+    ScMenu1               : "Menu",
+    ScMenu2               : "(il) (menu)",
+    ScMenuAna1            : "Menu analita",
+    ScMenuAna2            : "Menu analisi",
+    ScMenuMain            : "Menu principale",
+    ScMenuSet1            : "Impostazioni",
+    ScMenuSet2            : "Menu impostazioni",
+    ScNichromeWire        : "(il) filo (nichel cromo)",
+    ScNotUnderstand1      : "Non capisco",
+    ScNotUnderstand2      : "Non ho capito",
+    ScNotUnderstand3      : "Cosa",
+    ScNumber1             : " (numero) 1",
+    ScNumber2             : " (numero) 2",
+    ScNumber3             : " (numero) 3",
+    ScNumber4             : " (numero) 4",
+    ScOnHeater            : "sulla piastra",
+    ScOpen                : "Apri ",
+    ScPut1                : "Metti ",
+    ScPut2                : "Mettila ",
+    ScPut3                : "Mettilo ",
+    ScSmell1              : "Annusa",
+    ScSmell2              : "Annusa ",
+    ScSpatula             : "(la) spatola",
+    ScStirrer             : "(l')agitatore",
+    ScStop                : "Arresta ",
+    ScSwitchOff           : "Spegni ",
+    ScSwitchOn            : "Accendi ",
+    ScTake                : "Prendi ",
+    ScTestTube            : "(la) provetta",
+    ScTurn                : "Gira ",
+    ScTV                  : "(la) TV",
+    ScUnlock              : "Sblocca ",
+    ScUse                 : "Usa ",
+    ScUseLighterBunsen1   : "Usa (l')accendino col bunsen",
+    ScUseLighterBunsen2   : "Usa (l')accendino con (il) bunsen",
+    ScUseLighterCurcible  : "Usa (l')accendino con (la) capsula",
+    ScUseNichromeBunsen1  : "Usa (il) filo (nichel cromo) col bunsen",
+    ScUseNichromeBunsen2  : "Usa (il) filo (nichel cromo) con (il) bunsen",
+    ScUseNichromeTube     : "Usa (il) filo (nichel cromo) con (la) provetta",
+    ScUseNichromeTube1    : "Usa (il) filo (nichel cromo) con (la) provetta (numero) 1",
+    ScUseNichromeTube2    : "Usa (il) filo (nichel cromo) con (la) provetta (numero) 2",
+    ScUseNichromeTube3    : "Usa (il) filo (nichel cromo) con (la) provetta (numero) 3",
+    ScUseNichromeTube4    : "Usa (il) filo (nichel cromo) con (la) provetta (numero) 4",
+    ScWashBottle          : "(la) spruzzetta",
+    ScWatchGlass          : "(il) vetrino d'orologio",
+    ScWith                : "con ",
+
+    /**** SQL commands ****/
+
+    SqlEvent              : "Event_IT",
+    SqlMolName            : "MolName_IT",
+    SqlReagent            : "Reagent_IT",
+    SqlReagentNameSc      : "ReagentNameSc_IT",
+    SqlSmell              : "Smell_IT",
+
+    /**** Spoken sentences ****/
+
+    SsAlexa               : "Alexa non sa niente di chimica",
+    SsAlreadyEmpty        : "È già svuotato",
+    SsAlreadyEmptyAll     : "È già tutto svuotato",
+    SsAlreadyTaken        : "Ce l'ho già",
+    SsAnaAlready          : "Hai già messo l'analita",
+
+    SsAnaCodeEmpty        : "Devi inserire il codice prima della conferma",
+    SsAnaCodeInvalid      : "Codice non valido. Controlla che sia corretto",
+    SsAnaCodeOk           : "Hai inserito il codice",
+    SsAnaCodeReady        : "Ora sei pronto per l'analisi incognita. In bocca al lupo!",
+    SsAnaCodeTooShort     : "Codice troppo corto. Deve essere di " + CODE_LENGTH + " caratteri",
+
+    SsBeforeAna           : "Prima di iniziare devi selezionare l'analita",
+    SsBathGlassEmpty      : "È inutile mettere una provetta vuota nel bagnomaria",
+
+    SsBunsenAlrGasOpen    : "Il gas è già aperto",
+    SsBunsenAlrGasClose   : "Il gas è già chiuso",
+
+    SsBunsenAlrOff        : "Il bunsen è già spento",
+    SsBunsenAlrOn         : "Il bunsen è già acceso",
+    SsBunsenAlrOx         : "Il bunsen è già regolato sulla fiamma ossidante",
+    SsBunsenAlrRed        : "Il bunsen è già regolato sulla fiamma riducente",
+    SsBunsenNoGas         : "Non posso accendere il bunsen senza gas. Apri il rubinetto prima di accenderlo",
+    SsBunsenNoLighter     : "Non posso accendere il bunsen senza l'accendino",
+    SsBunsenNoRed         : "Non posso accendere il bunsen se la fiamma è ossidante. Gira la ghiera per renderla riducente",
+    SsBunsenOff           : "Ora il bunsen è spento",
+    SsBunsenOn            : "Ora il bunsen è acceso",
+    SsBunsenOx            : "Ora il bunsen è regolato sulla fiamma ossidante",
+    SsBunsenRed           : "Ora il bunsen è regolato sulla fiamma riducente",
+
+    SsCantAddCH2Cl21      : "Il diclorometano può essere messo solo nelle provette",
+    SsCantAddCH2Cl22      : "Il diclorometano è già stato messo",
+    SsCantAddReagent      : "Non posso aggiungere il reattivo",
+    SsCantAddReagentInd   : "Non ha senso bagnare questa cartina indicatrice con un reattivo",
+    SsCantAddReagentPaper1: "La cartina è già impregnata di un altro reattivo",
+    SsCantAddReagentPaper2: "La cartina è già impregnata di questo reattivo",
+    SsCantBurning         : "Non posso, sta bruciando!",
+    SsCantEmpty           : "Devi selezionare la vetreria da svuotare",
+    SsCantEmptyLighter    : "Non posso svuotare l'accendino",
+    SsCantEmptyStirrer    : "Non posso svuotare l'agitatore",
+    SsCantPutInBath       : "Non posso metterlo nel bagnomaria",
+    SsCantPutInCent       : "Non posso metterlo nella centrifuga",
+    SsCantUseBeaker       : "Non posso usare il becher",
+    SsCantUseCurcible     : "Non posso usare la capsula",
+    SsCantUseDropper      : "Non posso usare il contagocce",
+    SsCantUseLighter      : "Non posso usare l'accendino",
+    SsCantUseSpatula      : "Non posso usare la spatola",
+    SsCantUseStirrer      : "Non posso usare l'agitatore",
+    SsCantUseTestTube     : "Non posso usare la provetta",
+    SsCantUseWashBottle   : "Non posso usare la spruzzetta",
+    SsCantUseWatchGlass   : "Non posso usare il vetrino d'orologio",
+
+    SsCentAlrClose        : "La centrifuga è già chiusa",
+    SsCentAlrOff          : "La centrifuga è già spenta",
+    SsCentAlrOn           : "La centrifuga è già accesa",
+    SsCentAlrOpen         : "La centrifuga è già aperta",
+    SsCentNotBal          : "Il rotore non è bilanciato. Controlla il livello di liquido nelle provette",
+    SsCentGlassEmpty      : "È inutile mettere una provetta vuota nella centrifuga",
+    SsCentGlassPaper      : "Non posso mettere la provetta in centrifuga con la cartina",
+    SsCentOddTubes        : "Non posso usare la centrifuga con un numero dispari di provette",
+    SsCentOpenLock        : "Non posso aprire la centrifuga perché il coperchio ha il blocco di sicurezza",
+    SsCentOpenOff         : "Non posso aprire la centrifuga quando è spenta",
+    SsCentOpenRun         : "Non posso aprire la centrifuga perché è in funzione",
+    SsCentPosTubes        : "Le provette non sono nella giusta posizione",
+    SsCentPutClose        : "Non posso mettere la provetta nella centrifuga perché è chiusa",
+    SsCentSameTube        : "Non posso mettere due provette nello stesso alloggiamento",
+    SsCentUnlockOff       : "Non posso sbloccare il coperchio perché la centrifuga è spenta",
+    SsCentUnlockRun       : "Non posso sbloccare il coperchio perché la centrifuga è in funzione",
+
+    SsCleanGlassware1     : "Prima di usare la vetreria, la devi sciacquare con acqua distillata",
+    SsCleanGlassware2     : "Usa la spruzzetta e poi svuota il contenuto nei rifiuti",
+    SsCuAlready           : "C'è già una lamina di rame",
+    SsDropperClean        : "Metti dell'acqua in una provetta, aspirala con la pipetta e svuotala nei rifiuti",
+    SsDropperInd          : "Non ha senso bagnare questa cartina indicatrice con una soluzione",
+    SsDropperNothing      : "Non c'è nulla da pipettare",
+    SsDropperPaper1       : "Non è possibile pipettare perchè c'è la cartina",
+    SsDropperPaper2       : "Non ha senso bagnare la cartina con una soluzione come questa",
+    SsExplosion           : "Complimenti, hai fatto esplodere il laboratorio. La simulazione verrà riavviata",
+
+    SsFlameTest           : "Per eseguire il saggio alla fiamma devi:\n" +
+                            "- mettere l'acido cloridrico concentrato nella provetta;\n" +
+                            "- mettere l'analita sul vetrino d'orologio;\n" +
+                            "- accendere il bunsen e regolare la fiamma su ossidante;\n" +
+                            "- pulire il filo.",
+    SsFlameTestAna        : "Devi mettere l'analita sul vetrino d'orologio",
+    SsFlameTestBunsen     : "Devi accendere il bunsen",
+    SsFlameTestOx         : "La fiamma deve essere regolata su ossidante",
+    SsFlameTestHCl        : "La provetta deve contenere l'acido cloridrico concentrato",
+    SsFlameTestNiCr       : "Prima di usare il filo, lo devi pulire immergendolo nell'acido cloridrico concentrato e poi nella fiamma per almeno tre volte",
+    SsFlameTestWrongTube  : "La provetta non contiene acido cloridrico concentrato",
+
+    SsGoogle              : "Dimentica Google. Io sono molto meglio",
+
+    SsHeaterBeakerWater   : "Non posso mettere il becher sulla piastra perché non contiene alcun liquido e " +
+                            "si rischierebbe di romperlo",
+    SsHeaterCantPut       : "Non posso metterlo sulla piastra",
+    SsHeaterGlassEmpty    : "È inutile mettere sulla piastra la vetreria quando è vuota",
+
+    SsHelp                : "Studia di più che ti fa bene",
+    SsLightAlreadyOff     : "Con cosa ti sei intossicato? La luce è già spenta!",
+    SsLightAlreadyOn      : "Cosa ti è finito negli occhi? La luce è già accesa!",
+    SsLighterBurning      : "Sta già bruciando!",
+    SsLighterNothing      : "Non c'è nulla da incendiare",
+    SsNothingToLeave      : "Non ho nulla da lasciare",
+    SsNotUnderstand1      : "Lavati le orecchie. Io non ripeto mai",
+    SsNotUnderstand2      : "Non ho capito",
+    SsPaperAlready        : "C'è già una cartina",
+    SsPaperNotPresent     : "Non c'è alcuna cartina",
+    SsPaperNoTrash        : "Non posso buttare via la sola cartina",
+    SsPaperTubeClose      : "L'imboccatura della provetta è ostruita dalla cartina",
+    SsPaperWithSolid      : "Non posso aggiungere un solido alla cartina",
+    SsSelectGlassware     : "Prima devi selezionare la vetreria",
+    SsSmell               : "Sento un odore",
+    SsSmellGas1           : "Sento odore di gas",
+    SsSmellGas2           : "Sento un forte odore di gas",
+    SsSmellGas3           : "Attenzione! Sento un fortissimo odore di gas!",
+    SsSmellNone           : "Non sento alcun odore",
+    SsSmellNoneAmbient    : "Non sento alcun odore nell'aria",
+    SsSmellTubeCent       : "Non sento l'odore della provetta perché è chiusa nella centrifuga",
+    SsSmellTubePaper      : "Non posso annusare la provetta perché sopra c'è la cartina",
+    SsStirrerClean        : "L'agitatore è sporco, sciacqualo con acqua distillata",
+    SsStirrerNothing      : "Non c'è nulla da mescolare",
+    SsStirrerPaper        : "Non è possibile mescolare perchè c'è la cartina",
+    SsSubstToAnalize      : "La sostanza da analizzare sarà:",
+    SsSwitchOffLight      : "Non sono Alexa, ma ti faccio questo favore lo stesso",
+    SsSwitchOnLight       : "Non mi avrai preso per Google?",
+    SsSwitchOffTV         : "La TV è ora spenta",
+    SsSwitchOnTV          : "La TV è ora accesa",
+
+    Trash                 : "Rifiuti",
+
+    /**** TV ****/
+
+    TvLoading             : "Caricamento video...",
+    TvPlayListTitle       : "Elenco video",
+
+    WaterDist             : "Acqua dist."
+  };
+} else {
+  Msg = {
+
+    /**** Analysis generator ****/
+
+    AnaBtGenerate         : "Build",
+    AnaCsvAnalyte         : "Analyte",
+    AnaCsvAnalyteID       : "Analyte ID",
+    AnaCsvCode            : "Code",
+    AnaCsvStudentID       : "Student ID",
+    AnaFileName           : "Analysis.csv",
+    AnaErrSubstNum        : "Invalid number of substances",
+    AnaLblSoluble         : "Number of soluble sunstances:",
+    AnaLblInsoluble       : "Number of insoluble sunstances:",
+    AnaLblStudents        : "Number of students:",
+    AnaLoading            : "Loading Analysis Generator...",
+    AnaTitle              : "Analysis Generator",
+
+    /**** LabSim ****/
+
+    Analyte               : "Analyte",
+    BtOk                  : "Ok",
+
+    /**** About dialog ****/
+
+    DlgAboutSubTitle      : "Qualitative Analysis Simulator",
+    DlgAboutRights        : "All rights reserved",
+
+    /**** Analyte code dialog ****/
+
+    DlgAnaCodeConfirm     : "Confirm",
+    DlgAnaCodeTitle       : "Analyte code",
+
+    /**** Analyte menu ****/
+
+    DlgMenuAnaCode        : "Code",
+    DlgMenuAnaRndAll      : "Random",
+    DlgMenuAnaRndInsol    : "Random insoluble",
+    DlgMenuAnaRndSol      : "Random soluble",
+    DlgMenuAnaTitle       : "Analyte menu",
+
+    /**** Main menu ****/
+
+    DlgMenuAbout          : "About",
+    DlgMenuAna            : "Select analyte",
+    DlgMenuRestart        : "Restart the simulation",
+    DlgMenuTitle          : "Main menu",
+
+    /**** Settings menu ****/
+
+    DlgMenuSetDetail      : "Detailed graphics",
+    DlgMenuSetSound       : "Sound effects",
+    DlgMenuSetSpeechRec   : "Speech recognition",
+    DlgMenuSetSpeechSynth : "Speech synthesis",
+    DlgMenuSetTitle       : "Settings",
+
+    Language              : "English",
+    Loading               : "Loading LabSim...",
+    LoadingDb             : "Connecting to the database...",
+
+    /**** Log messages ****/
+
+    LogWelcome            : "Welcome to LabSim\nClick the screen to watch the videos",
+
+    PicoTtsLanguage       : "en-GB",
+    ResponsiveVoice       : "UK English Female",
+
+    /**** Speech commands ****/
+
+    ScAbout               : "About",
+    ScAlexa               : "Alexa",
+    ScAnalyte             : "(the) analyte",
+    ScBeaker              : "(the) beaker",
+    ScBunsen1             : "(the) busen",
+    ScBunsen2             : "(the) burner",
+    ScBunsenOx            : "oxidizing flame",
+    ScBunsenRed           : "reducing flame",
+    ScBunsenRing          : "(the) ring",
+    ScBunsenTap           : "(the) (bunsen) tap",
+    ScCent1Min            : "(Run) (the) centrifuge for one minute",
+    ScCent2Min            : "(Run) (the) centrifuge for two minutes",
+    ScCent3Min            : "(Run) (the) centrifuge for tree minutes",
+    ScCent4Min            : "(Run) (the) centrifuge for four minutes",
+    ScCentrifuge          : "(the) centrifuge",
+    ScClose               : "Close ",
+    ScCurcible            : "(the) curcible",
+    ScDropper1            : "(the) dropper",
+    ScDropper2            : "(the) pipette",
+    ScGoogle              : "Ok Google",
+    ScGotoCentrifuge      : "Go to (the) centrifuge",
+    ScGotoTV              : "Go to (the) TV",
+    ScGotoWork            : "Go to (the) workbench",
+    ScEmpty1              : "Empty (in the waste)",
+    ScEmpty2              : "Throw (away)",
+    ScEmptyAll1           : "Empty all",
+    ScEmptyAll2           : "Throw all (away)",
+    ScEmptyPaper          : "Throw (the) paper (away)",
+    ScHelp                : "Help",
+    ScInCentrifuge        : "in (the) centrifuge",
+    ScInWaterBath         : "in (the) water bath",
+    ScLeave1              : "Leave",
+    ScLeave2              : "Leave ",
+    ScLight               : "Light",
+    ScLighter             : "(the) lighter",
+    ScMenu1               : "Menu",
+    ScMenu2               : "(the) (menu)",
+    ScMenuAna1            : "Analyte menu",
+    ScMenuAna2            : "Analysis menu",
+    ScMenuMain            : "Main menu",
+    ScMenuSet1            : "Settings",
+    ScMenuSet2            : "Settings menu",
+    ScNichromeWire        : "(the) (nickel chrome) wire",
+    ScNotUnderstand1      : "I don't understand",
+    ScNotUnderstand2      : "I didn't understand",
+    ScNotUnderstand3      : "What",
+    ScNumber1             : " (number) 1",
+    ScNumber2             : " (number) 2",
+    ScNumber3             : " (number) 3",
+    ScNumber4             : " (number) 4",
+    ScOnHeater            : "on (the) heater",
+    ScOpen                : "Open ",
+    ScPut1                : "Put ",
+    ScPut2                : "Put it ",
+    ScPut3                : "Put it ",
+    ScSmell1              : "Smell",
+    ScSmell2              : "Smell ",
+    ScSpatula             : "(the) spatula",
+    ScStirrer             : "(the) stirrer",
+    ScStop                : "Stop ",
+    ScSwitchOff           : "Turn off ",
+    ScSwitchOn            : "Turn on ",
+    ScTake                : "Take ",
+    ScTestTube            : "(the) test tube",
+    ScTurn                : "Turn ",
+    ScTV                  : "(the) TV",
+    ScUnlock              : "Unlock ",
+    ScUse                 : "Use ",
+    ScUseLighterBunsen1   : "Use (the) lighter with (the) bunsen",
+    ScUseLighterBunsen2   : "Use (the) lighter with (the) burner",
+    ScUseLighterCurcible  : "Use (the) lighter with (the) curcible",
+
+    ScUseNichromeBunsen1  : "Use (the) (nickel chrome) wire with the bunsen",
+    ScUseNichromeBunsen2  : "Use (the) (nickel chrome) wire with the burner",
+    ScUseNichromeTube     : "Use (the) (nickel chrome) wire with (the) (test) tube",
+    ScUseNichromeTube1    : "Use (the) (nickel chrome) wire with (the) (test) tube (number) 1",
+    ScUseNichromeTube2    : "Use (the) (nickel chrome) wire with (the) (test) tube (number) 2",
+    ScUseNichromeTube3    : "Use (the) (nickel chrome) wire with (the) (test) tube (number) 3",
+    ScUseNichromeTube4    : "Use (the) (nickel chrome) wire with (the) (test) tube (number) 4",
+
+    ScWashBottle          : "(the) wash bottle",
+    ScWatchGlass          : "(the) watch glass",
+    ScWith                : "with ",
+
+    /**** SQL commands ****/
+
+    SqlEvent              : "Event",
+    SqlMolName            : "MolName",
+    SqlReagent            : "Reagent",
+    SqlReagentNameSc      : "ReagentNameSc",
+    SqlSmell              : "Smell",
+
+    /**** Spoken sentences ****/
+
+    SsAlexa               : "Alexa doesn't know chemistry",
+    SsAlreadyEmpty        : "It is already empty",
+    SsAlreadyEmptyAll     : "Everything is already empty",
+    SsAlreadyTaken        : "I've already taken",
+    SsAnaAlready          : "You have already put the analyte",
+
+    SsAnaCodeEmpty        : "You must put the code before confirming",
+    SsAnaCodeInvalid      : "Invalid code. Chack it and retray",
+    SsAnaCodeOk           : "You put the code",
+    SsAnaCodeReady        : "You are now ready for the analysis. Good luck!",
+    SsAnaCodeTooShort     : "Code too short. It must be " + CODE_LENGTH + " characters long",
+
+    SsBeforeAna           : "Before to start, you must select the analyte",
+    SsBathGlassEmpty      : "It is not useful to put the empty test tube in the water bath",
+
+    SsBunsenAlrGasOpen    : "The gas is already open",
+    SsBunsenAlrGasClose   : "The gas is already closed",
+    SsBunsenAlrOff        : "The bunsen is already off",
+    SsBunsenAlrOn         : "The bunsen is already on",
+    SsBunsenAlrOx         : "The burner is already set to the oxidizing flame",
+    SsBunsenAlrRed        : "The burner is already set to the reducing flame",
+    SsBunsenNoGas         : "Can't light the bunsen if the gas is closed. Open the tap to open it",
+    SsBunsenNoLighter     : "Can't light the bunsen without the lighter",
+    SsBunsenNoRed         : "Can't light the bunsen if the flame is oxidizing. Turn the ring to make it reducing",
+    SsBunsenOff           : "The bunsen is now turned off",
+    SsBunsenOn            : "The bunsen is now turned on",
+    SsBunsenOx            : "The bunsen is now set to the oxidizing flame",
+    SsBunsenRed           : "The bunsen is now set to the reducing flame",
+
+    SsCantAddCH2Cl21      : "Dichloromethane can be added only to test tubes",
+    SsCantAddCH2Cl22      : "Dichloromethane was already added",
+    SsCantAddReagent      : "Can't add the reagent",
+    SsCantAddReagentInd   : "There is no point wetting the indicator with a reagent",
+    SsCantAddReagentPaper1: "The paper is already soaked with another reagent",
+    SsCantAddReagentPaper2: "The paper is already soaked with this reagent",
+    SsCantBurning         : "I can't because it is burning!",
+    SsCantEmpty           : "You must select the glassware to empty it",
+    SsCantEmptyLighter    : "Can't empty the lighter",
+    SsCantEmptyStirrer    : "Can't empty the stirrer",
+    SsCantPutInBath       : "Can't put it in the water bath",
+    SsCantPutInCent       : "Can't put it in the centrifuge",
+    SsCantUseBeaker       : "Can't use the beaker",
+    SsCantUseCurcible     : "Can't use the curcible",
+    SsCantUseDropper      : "Can't use the dropper",
+    SsCantUseLighter      : "Can't use the lighter",
+    SsCantUseSpatula      : "Can't use the spatula",
+    SsCantUseStirrer      : "Can't use the stirrer",
+    SsCantUseTestTube     : "Can't use the test tube",
+    SsCantUseWashBottle   : "Can't use the wash bottle",
+    SsCantUseWatchGlass   : "Can't use the watch glass",
+
+    SsCentAlrClose        : "The centrifuge is already close",
+    SsCentAlrOff          : "The centrifuge is already off",
+    SsCentAlrOn           : "The centrifuge is already on",
+    SsCentAlrOpen         : "The centrifuge is already open",
+    SsCentGlassEmpty      : "It is not useful to put the empty test tube in the centrifuge",
+    SsCentGlassPaper      : "Can't put the test tube into the centrifuge with the paper",
+    SsCentNotBal          : "The rotor is not balanced. Check the liquid level in the tubes",
+    SsCentOddTubes        : "Can't use the centrifuge with an odd number of tubes",
+    SsCentOpenLock        : "Can't open the centrifuge because the lid has the safety lock",
+    SsCentOpenOff         : "Can't open the centrifuge because it is turned off",
+    SsCentOpenRun         : "Can't open the centrifuge because it is running",
+    SsCentPosTubes        : "The tubes are not in the right position",
+    SsCentPutClose        : "Can't put the test tube into the centrifuge beacuse it is closed",
+    SsCentSameTube        : "Can't put two test tubes in the same housing",
+    SsCentUnlockOff       : "Can't unlock the lid because the centrifuge is turned off",
+    SsCentUnlockRun       : "Can't unlock the lid because the centrifuge is running",
+
+    SsCleanGlassware1     : "Before to use the glassware, you must clean it with distilled water",
+    SsCleanGlassware2     : "Use the wash bottle and then empty the glassware into the trash beaker",
+    SsCuAlready           : "The copper plate is already present",
+    SsDropperClean        : "Put the water into a test tube, suck it up with the dropper and empty it into the trash beaker",
+    SsDropperInd          : "There is no point wetting the indicator with a solution",
+    SsDropperNothing      : "There is nothing to pipette",
+    SsDropperPaper1       : "Can't pipette because there is the paper",
+    SsDropperPaper2       : "There is no point wetting the paper with a solution like this",
+    SsExplosion           : "Congratulations, you blew up the lab. The simulation will restart",
+
+    SsFlameTest           : "Before to perform the flame test, you must:\n" +
+                            "- put the concentrated hydrochloric acid into the test tube;\n" +
+                            "- put the analyte on the watch glass;\n" +
+                            "- turn on the bunsen setting the flame to oxidizing;\n" +
+                            "- clean the wire.\n",
+    SsFlameTestAna        : "You must put the analyte on the watch glass",
+    SsFlameTestBunsen     : "You must turn on the bunsen",
+    SsFlameTestHCl        : "The test tube must contain the concentrated hydrochloric acid",
+    SsFlameTestNiCr       : "Before to use the wire, you must clean it with the concentrated hydrochloric acid and then in the flame for at least three times",
+    SsFlameTestOx         : "The flame must be oxidizing",
+    SsFlameTestWrongTube  : "The test tube doesn't contain concentrated hydrocloric acid",
+
+    SsGoogle              : "Forget Google. I am much better",
+
+    SsHeaterBeakerWater   : "Can't put the beaker on the heater, because it does not contain any liquid" +
+                            "You would risk breaking it",
+    SsHeaterCantPut       : "Can't put it on the heater",
+    SsHeaterGlassEmpty    : "It is not useful to put the empty glassware on the heater",
+
+    SsHelp                : "Study more that is good for you",
+    SsLightAlreadyOff     : "What did you get drunk with? The light is already off!",
+    SsLightAlreadyOn      : "What got into your eyes? The light is already on!",
+    SsLighterBurning      : "It's already burning!",
+    SsLighterNothing      : "There is nothing to ignite",
+    SsNothingToLeave      : "I have nothing to leave",
+    SsNotUnderstand1      : "Wash your ears: I never repeat",
+    SsNotUnderstand2      : "I don't understand",
+    SsPaperAlready        : "The paper is already present",
+    SsPaperNotPresent     : "There is no paper",
+    SsPaperNoTrash        : "Can't trash only the paper",
+    SsPaperTubeClose      : "The mouth of the test tube is blocked by paper",
+    SsPaperWithSolid      : "Can't add a solid to the paper",
+    SsSelectGlassware     : "First you must to select the glassware",
+    SsSmell               : "I feel a smell",
+    SsSmellGas1           : "I smell gas",
+    SsSmellGas2           : "I feel a strong smell of gas",
+    SsSmellGas3           : "Warning! I feel a very strong smell of gas",
+    SsSmellNone           : "I don't smell any",
+    SsSmellNoneAmbient    : "I don't feel any smell in the air",
+    SsSmellTubeCent       : "Can't smell the test tube because it is closed in the centrifuge",
+    SsSmellTubePaper      : "Can't smell the test tube because the paper is on it",
+    SsStirrerClean        : "The stirrer is not clean. Use the distilled water to clean it",
+    SsStirrerNothing      : "There is nothing to mix",
+    SsStirrerPaper        : "Can't stir because there is the paper",
+    SsSubstToAnalize      : "The substance to analize will be:",
+    SsSwitchOffLight      : "I'm not Alexa, but I'm doing you this favor anyway",
+    SsSwitchOnLight       : "Did you confuse me with Google?",
+    SsSwitchOffTV         : "The TV is now turned off",
+    SsSwitchOnTV          : "The TV is now turned on",
+
+    Trash                 : "Trash",
+
+    /**** TV ****/
+
+    TvLoading             : "Loading videos...",
+    TvPlayListTitle       : "List of the videos",
+
+    WaterDist             : "Dist. water"
+  };
+}
