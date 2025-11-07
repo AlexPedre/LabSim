@@ -33,12 +33,12 @@ LabSim has some limitations:
 ## Requirements
 ### Hardware
 LabSim works on:
-- Desktop/laptop (Linux, macOS, Windows)
-- Tablet (Android, iOS, Windows)
-- Smartphone (Android, iOS) — though smaller screens/weak GPUs are not ideal.
+- Desktop/laptop (ChromeOS, Linux, macOS, Windows)
+- Tablet (Android, Windows)
+- Smartphone (Android) — though smaller screens/weak GPUs are not ideal.
 
 ### VR (optional, for full immersive experience)
-- Stand‑alone VR headset (e.g., Oculus Quest) or PC‑connected VR headset (e.g., HTC, Oculus).
+- Stand‑alone VR headset (e.g., Meta Quest) or PC‑connected VR headset (e.g., HTC, Meta).
 - Internet connection is required; slow connections mainly impact video loading.
 
 **Tips for less powerful devices:**
@@ -46,7 +46,7 @@ LabSim works on:
 - On mobile: consider using a USB‑OTG or Bluetooth mouse for better control.
 
 ## Getting Started
-1. Open your browser (preferably Chromium‑based).
+1. Open your browser (Chromium‑based, Chrome, Edge).
 2. Navigate to:
    ```
    https://www.ddl.unimi.it/labsim/
