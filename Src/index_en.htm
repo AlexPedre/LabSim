@@ -1,0 +1,774 @@
+
+<!------------------------------------------->
+<!--          LabSim - Main page           -->
+<!--  (c) 2020-2025, Alessandro Pedretti   -->
+<!------------------------------------------->
+
+
+<!DOCTYPE html>
+<html lang="en-EN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="description" content="Laboratory Simulator of Inorganic Qualitative Analysis">
+    <meta name="author"      content="Alessandro Pedretti">
+    <meta name="keywords"    content="analysis, chemistry, simulator, VR">
+
+    <title>LabSim - Laboratory Simulator of Inorganic Qualitative Analysis</title>
+
+    <!-- Icons -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="css/docs.css?ver=LABSIM_VERSION">
+    <link rel="stylesheet" type="text/css" href="css/balloon.css?ver=LABSIM_VERSION">
+
+    <!-- Scripts -->
+
+    <script type="text/javascript" src="js/docs.js?ver=LABSIM_VERSION"></script>
+  </head>
+
+  <body onpageshow="ShowEvent()" bgcolor="#d9d9d9">
+    <div class="pageback">
+
+      <!----------------->
+      <!--- Main menu --->
+      <!----------------->
+
+      <!--- Menu button -->
+
+      <div id="BT_Menu" onclick="BT_MenuClick()" title="Menu">
+        <div class="BT_MenuComp"></div>
+        <div class="BT_MenuComp"></div>
+        <div class="BT_MenuComp"></div>
+      </div>
+
+      <!--- Menu items -->
+
+      <nav id="Menu" class="floating-menu" onmouseleave="MenuClick()">
+        <span >
+        <table width="100%">
+          <tr>
+            <td><B>Contents</B></td>
+            <td align="right"><a class="floating-menu-link" href="javascript:MenuClick()"><B>X</B></a></td>
+          </tr>
+        </table>
+
+        <table class="floating-menu-table">
+          <tr><td>1.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#WHATIS">What is LabSim</a></td></tr>
+          <tr><td>2.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#WHATCANDO">What you can do</a></td></tr>
+          <tr><td>3.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#WHATCANNOTDO">What you cannot do</a></td></tr>
+          <tr><td>4.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#WHATYOUNEED">What you need to use LabSim</a></td></tr>
+          <tr><td>5.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#RUN">How to start LabSim</a></td></tr>
+          <tr><td>6.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#INPUTDEVICES">Input devices</a></td></tr>
+          <tr><td>7.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#USAGE">What you can interact with</a></td></tr>
+          <tr><td>8.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#REACTIONS">Chemical reactions</a></td></tr>
+          <tr><td>9.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#SUPPMATERIAL">Supporting material</a></td></tr>
+          <tr><td>10.</td><td><a class="floating-menu-link" onclick="MenuClick()" href="#COPYRIGHT">Copyright and disclaimers</a></td></tr>
+        </table>
+        <hr>
+        <p style="text-align: center; font-size: 16px;"><a class="floating-menu-link" href="labsim.htm?lang=en">>> Start LabSim <<</a></p>
+        </span>
+      </nav>
+
+
+      <!-------------->
+      <!--- Header --->
+      <!-------------->
+
+      <table width="100%">
+        <tr>
+          <td>
+            <table><tr>
+              <td><img style="vertical-align: middle;" src="images/unimi_logo.svg" width="72" height="72" alt="Università degli Studi di Milano"></td>
+              <td>
+                <a href="https://www.unimi.it/" traget="_blank">Universit&agrave; degli Studi di Milano</a><br>
+                <a href="http://www.disfarm.unimi.it/" target="_blank">Department of Pharmaceutical Sciences</a>
+              </td>
+            </tr></table>
+          </td>
+          <td align="right">
+            <a href="index_it.htm">
+              <img style="vertical-align: middle;" src="images/flag_it.png" width="32" height="32">&nbsp;
+              <span style="vertical-align: middle; margin-right: 16px; font-size: 14px;">Versione italiana</span>
+            </a>
+          </td>
+        </tr>
+      </table>
+      <hr style="margin-top: 0px;">
+
+
+      <!------------>
+      <!--- Logo --->
+      <!------------>
+
+      <p align="center" >
+        <a href="labsim.htm?lang=en" aria-label="Click here to start the simulation!" data-balloon-pos="down" class="balloon-labsim">
+          <img src="images/labsim_logo_large.png" alt="LabSim" width="537" height="364">
+        </a>
+        <br>
+        <font style="font-size: 24px;">Laboratory Simulator of Inorganic Qualitative Analysis</font>
+        <br><br>
+      </p>
+
+
+      <!---------------------->
+      <!--- What is LabSim --->
+      <!---------------------->
+
+      <a name="WHATIS"><p class="title">1. What is LabSim</p></a>
+      <p class="text">
+        <I>LabSim</I> is chemistry laboratory simulator of inorganic qualitative analysis.
+        In more detail, it is a 3D web application developed to run within an internet
+        browser based on <I>Chromium</I> such as
+        <a href="https://www.google.it/intl/it/chrome/" target="_blank">Google Chrome</a> and
+        <a href="https://www.microsoft.com/it-it/edge/" target="_blank">Microsoft Edge</a>.
+      </p>
+      <p align="center">
+        <img class="border" src="images/labsim_snap_01.jpg" alt="LabSim workbench" width="640" height="386">
+        <br>
+      </p>
+      <p class="text">
+        The main features are:
+      </p>
+      <ul>
+        <li>based on <a href="https://aframe.io/" target="_blank">A-Frame</a> HTML framework;</li>
+        <li>possibility to run with all hardware/software configurations supported by A-Frame including mobile devices and VR headsets;</li>
+        <li>
+          voice commands (e.g. "take the hydrochloric acid") to support disabled persons having difficulties
+          in accessing a real laboratory and interacting with the input devices;
+        </li>
+        <li>speech synthesis to support the strudents during their experiences;</li>
+        <li>multilanguage support (english and italian);</li>
+        <li>
+          based on a <a href="https://www.sqlite.org/" target="_blank">SQLite</a> database, including more than 3500
+          reactions for the recognition of about 60 inorganic analytes;
+        </li>
+        <li>multimedia player integrated in the 3D environment with a large library of video tutorials.</li>
+      </ul>
+
+
+      <!----------------------->
+      <!--- What you can do --->
+      <!----------------------->
+
+      <a name="WHATCANDO"><p class="title">2. What you can do</p></a>
+      <p class="text">
+        With LabSim, you can practice as in a real laboratory of qualitative inorganic analysis and
+        the main activities are:
+      </p>
+      <ul>
+        <li>Solubility test in water of a substance even in the presence of reactants such as strong/weak acids/bases;</li>
+        <li>pH measurement of a solution with universal indicator paper;</li>
+        <li>Phase separation by centrifugation;</li>
+        <li>Heating by plate or water bath;</li>
+        <li>Tests for the recognition of anions by wet method;</li>
+        <li>Tests for the recognition of cations by wet method;</li>
+        <li>Recognition tests by dry method (non water-soluble substances);</li>
+        <li>Flame test;</li>
+        <li>Complete analysis of an unknown substance (both water-soluble and non-water-soluble);</li>
+        <li>Watching video tutorials on both virtual and real laboratory activities.</li>
+      </ul>
+
+
+      <!-------------------------->
+      <!--- What you cannot do --->
+      <!-------------------------->
+
+      <a name="WHATCANNOTDO"><p class="title">3. What you cannot do</p></a>
+      <ul>
+        <li>
+          <B>Carbonate and bicarbonate test with U tube.</B><br>
+          This is not a real problem, because the effervescence is clearly visible. Moreover,
+          it is impossible to confuse with the nitrites, because their effervescence is red colored.
+        </li>
+        <li>
+          <B>Barium sulfate recognition with the solution of the anions.</B><br>
+          This salt can be recognized because it is insoluble in strong acids and bases and it gives a
+          positive result in the flame test (green flame). LabSim includes a video tutorial explaining
+          how to properly analyze barium sulfate.
+        </li>
+        <li>
+          <B>pH measurement transferring the liquid with the stirrer.</B><br>
+          Liquid transfers are only possible with the dropper.
+        </li>
+        <li>
+          <B>Sodium and potassium recognition by wet way.</B><br>
+          You can perform the flame test, which gives more reliable results.
+        </li>
+      </ul>
+
+
+      <!----------------------------------->
+      <!--- What you need to use LabSim --->
+      <!----------------------------------->
+
+      <a name="WHATYOUNEED"><p class="title">4. What you need to use LabSim</p></a>
+      <p class="text">
+        About the hardware, LabSim requires one of the following devices:
+      </p>
+
+      <ul>
+        <li><B>Desktop/Laptop</B> (Linux, MacOS, Windows)</li>
+        <li><B>Tablet</B> (Android, iOS, Windows)</li>
+        <li><B>Smartphone</B> (Android, iOS)</li>
+      </ul>
+
+      <p class="text">
+        For a fully immersive experience, it requires:
+      </p>
+
+      <ul>
+        <li><B>Stand-alone VR headset</B> (e.g. Oculus Quest, Oculus Quest 2, etc.)</li>
+        <li><B>VR headset connected to a PC</B> (e.g. HTC, Oculus, etc.)</li>
+      </ul>
+
+      <p class="text">
+        <U>The internet connection is required</U> and slow or unstable connections don't affect the
+        LabSim operation, even if can lengthen the loading time and compromise the video playback.<br>
+        Data consumption is limited to the loading phase and to the video playback.
+      </p>
+
+      <p class="title2">4.1 VR headsets</p>
+      <p class="text">
+        Labsim was developed to work with 3D VR headsets, however was tested only with <I>Oculus Quest</I>.
+        In VR mode, it requires a reduction of the scene details, that cannot needed by headset with better
+        performances or directly linked to a PC (e.g. <I>Oculus Link</I>).<br>
+        To reduce the graphic detail level, you must select <I>Main menu</I> &rarr; <I>Seattings</I> &rarr; disable <I>Detailed graphics</I>.<br>
+        At this time, you cannot yet directly manipulate the objects, but you can interact with them by controller lasers.
+      </p>
+
+      <p class="title2">4.2 Mobile devices</p>
+      <p class="text">
+        With mobile devices, LabSim uses the accelerometer for the scene rotation, however smartphones are not recommended,
+        because have too small displays and too low GPU performances.
+        If you cannot use a more performing device, you can improve the experience:
+      </p>
+
+      <ul>
+        <li>
+          <B>by reducing the graphic details of the scene</B>
+          (<I>Main menu</I> &rarr; <I>Settings</I> &rarr; disable <I>Detailed graphics</I>);
+        </li>
+        <li>
+          <B>by connecting a cheap USB mouse through the OTG adapter</B> (usually provided with Android smartphones);
+        </li>
+        <li>
+          alternatively, <B>by connecting a Bluetooth mouse</B>.
+        </li>
+      </ul>
+
+
+      <!--------------------------->
+      <!--- How to start LabSim --->
+      <!--------------------------->
+
+      <a name="RUN"><p class="title">5. How to start LabSim</p></a>
+      <p class="text">
+        In the address bar of the browser, type:
+      </p>
+
+      <p class="text" style="text-align: center; font-size: 18px;">
+        <a href="labsim.htm?lang=en">https://www.ddl.unimi.it/labsim/labsim.htm</a>
+      </p>
+
+      <p class="text">
+        After the loading screen, it will shown the copyright message:
+      </p>
+
+      <p align="center">
+        <img class="border" src="images/labsim_snap_02_en.jpg" alt="LabSim start screen" width="640" height="350">
+      </p>
+      <p class="text">
+        Click the <B>Ok</B> button to start the simulation. Clicking the <B>VR</B> button, you switch from widowed mode to full-screen or VR mode.
+        Press <B>Esc</B> key to return to the standard display mode.
+      </p>
+
+
+      <!--------------------->
+      <!--- Input devices --->
+      <!--------------------->
+
+      <a name="INPUTDEVICES"><p class="title">6. Input devices</p></a>
+      <p class="text">
+        This section shows the input devices supported by LabSim.
+      </p>
+
+      <a name="INPUTDEVICES_MOUSE"><p class="title2">6.1 Mouse</p></a>
+      <p class="text">
+        The mouse is the preferred input device for non-VR hardware systems, because permits a very precise interaction.
+        Here the main features supported by this device are shown:
+      </p>
+
+      <p align="center">
+        <img src="images/mouse_en.png" alt="Mouse functions" width="512" height="260">
+      </p>
+
+      <a name="INPUTDEVICES_KEYBOARD"><p class="title2">6.2 Keyboard</p></a>
+      <p class="text">
+        Some actions are available by keyboard:
+      </p>
+
+      <ul>
+        <li><B>Cursor keys</B> translate the scene.</li>
+        <li><B>Space bar</B> and the <B>m</B> key show the menu.</li>
+        <li><B>Esc</B> key closes the menu.</li>
+      </ul>
+
+      <a name="INPUTDEVICES_VR"><p class="title2">6.3 VR controllers</p></a>
+      <p class="text">
+        The main functions of a VR controller are here summarized:
+      </p>
+      <ul>
+        <li><B>Controller movement</B> change the laser position.</li>
+        <li><B>Pressing the triggers</B> you have the same effect when you press the left mouse button.</li>
+      </ul>
+
+     <a name="INPUTDEVICES_OTHER"><p class="title2">6.4 Other input devices</p></a>
+     <p class="text">
+       Devices available only with <B>tablets</B> and <B>smartphones</B>:
+     </p>
+     <ul>
+       <li><B>Screen touch</B> (tap) is equivalent to the mouse click.</li>
+       <li><B>Accelerometer</B> rotates the scene.</li>
+     </ul>
+
+
+     <!------------->
+     <!--- Usage --->
+     <!------------->
+
+     <a name="USAGE"><p class="title">7. What you can interact with</p></a>
+     <p class="text">
+       This section shows the object with which you can interact in the simulator.
+     </p>
+
+     <a name="USAGE_WORKBENCH"><p class="title2">7.1 What's on the workbench</p></a>
+     <p align="center">
+       <img src="images/labsim_workbench_en.png" alt="Workbench" width="640" height="400">
+     </p>
+     <p class="text">
+       Some objects cause actions as:
+     </p>
+     <ul>
+       <li>The <B>book</B> shows the main menu.</li>
+       <li>The <B>dog picture</B> allows to smell the air or the currently selected object.</li>
+     </ul>
+
+
+     <a name="USAGE_CENTRIFUGE"><p class="title2">7.2 The centrifuge</p></a>
+     <p align="center">
+       <img class="border" src="images/labsim_centrifuge_en.jpg" alt="The centrifuge" width="640" height="454">
+     </p>
+     <p class="text">
+       To use the centrifuge, you need:
+     </p>
+     <ul>
+       <li>Turn on the centrifuge by clicking the <B>Power</B> switch.</li>
+       <li>Unlock the lid by pushing the <B>Open</B> button.</li>
+       <li>Open the lid by clicking it.</li>
+       <li>
+         Put at least <B>two test tubes</B>
+         Inserire <B>almeno due provette</B> in the slots in <B>diametrically opposite position</B>, taking
+         care because they must contain the <B>same liquid quantity.</B>.
+       </li>
+       <li>Close the lid by clicking it.</li>
+       <li>Set the timer (<B>Timer</B>).</li>
+     </ul>
+     <p class="text">
+       For a complete phase separation, you have to centrifuge for at least 3 minutes. Watch the video-tutorial for the right use.
+     </p>
+
+
+     <a name="USAGE_TV"><p class="title2">7.3 The television</p></a>
+     <p class="text">
+       The television hangs on the wall to the right of the workbench. Usually, it reports important messages spoken by the speech synthesis,
+       but allows also to watch video tutorials. Clicking it, the video playlist is shown:
+     </p>
+     <p align="center">
+       <img class="border" src="images/labsim_tv_en.jpg" alt="The television" width="640" height="360">
+     </p>
+     <p class="text">
+       The clips with <I>LS</I> prefix are tutorial on LabSim, while the other ones are on experiences of a real laboratory,
+       that can be compared with the virtual ones.
+       When you start the video playing, moving the mouse pointer on the lower side of the TV, the controls are shown:
+     </p>
+     <p align="center">
+       <img class="border" src="images/labsim_video_en.jpg" alt="Video" width="640" height="360">
+     </p>
+     <p class="text">
+       Clicking the <B>stop</B> button, the playlist is shown.<br>
+       You can watch the clips also outside the LabSim environment by the following link:
+     </p>
+     <p style="text-align: center; font-size: 18px;">
+       <a href="video.htm">https://www.ddl.unimi.it/labsim/video.htm</a>
+     </p>
+     <p class="text">
+       After a moment, the starting screen with the playlist is shown.<br>
+       The main topics of the video are:<br><br>
+       <B>Tutorials on virtual laboratory (LS prefix):</B>
+     </p>
+     <ul>
+       <li>Base techniques (solubility, pH measurement, centrifuge use).</li>
+       <li>Tests for the identifications of the anions.</li>
+       <li>Tests for the identifications of the cations.</li>
+       <li>Flame test.</li>
+       <li>Analysis of water-insoluble molecules.</li>
+       <li>Two examples of analysis of unknown molecules.</li>
+     </ul>
+     <p class="text">
+       <B>Tutorials on real laboratory:</B>
+     </p>
+     <ul>
+       <li>Tests for the identifications of the anions.</li>
+       <li>Tests for the identifications of the cations.</li>
+       <li>Flame test.</li>
+       <li>Analysis of some water-insoluble molecules.</li>
+     </ul>
+
+
+     <a name="USAGE_FOOTPRINT"><p class="title2">7.4 The footprints</p></a>
+     <p class="text">
+       You can easily move around the laboratory by clicking the footprints:
+     </p>
+     <p align="center">
+       <img class="border" src="images/labsim_footprint_en.jpg" alt="Footprints" width="640" height="360">
+     </p>
+
+
+     <a name="USAGE_MENU"><p class="title2">7.5 The main menu</p></a>
+     <p class="text">
+       Tho show the main menu, you have to click <B>the book</B> on the workbench or
+       press <B>space</B> or <B>m</B> keys:
+     </p>
+     <p align="center">
+       <img class="border" src="images/labsim_menu_main_en.jpg" alt="Main menu" width="640" height="360">
+     </p>
+
+
+     <a name="USAGE_MENU_ANALYTE"><p class="title3">7.5.1 Analyte menu</p></a>
+     <p class="text">
+       In this menu, you can choose the analyte to train with:
+     </p>
+     <p align="center">
+       <img class="border" src="images/labsim_menu_ana_en.jpg" alt="Analyte menu" width="640" height="360">
+     </p>
+     <p class="text">
+       In particular, you can select:
+     </p>
+
+     <ul>
+       <li>
+         An unknown analyte with the code provided by the teacher.<br>
+         This feature is very useful when you have to assess the the student's learning level.
+         With a specific application avalilable on request, the teacher can automatically generate unknown
+         analyses for the entire classroom.<br>
+         Clicling this menu item, a window is shown in which you can type the six-character alphanumeric
+         code of the analysis:
+         <p align="center">
+            <img class="border" src="images/labsim_menu_code_en.jpg" alt="Codice analita" width="640" height="360">
+         </p>
+       </li>
+       <li>Any blank randomly.
+       <li>A water-soluble blank randomly.</li>
+       <li>A water-insoluble blank randomly.</li>
+       <li>A specific analyte.</li>
+     </ul>
+
+     <a name="USAGE_MENU_SETTINGS"><p class="title3">7.5.2 Settings menu</p></a>
+     <p class="text">
+       In this menu, you can change the main settings of the simulator:
+     </p>
+     <p align="center">
+       <img class="border" src="images/labsim_menu_settings_en.jpg" alt="Settings menu" width="640" height="360">
+     </p>
+     <p class="text">
+       In more detail:
+     </p>
+     <ul>
+       <li>
+         <B>Enable/disable the sound effects</B> (default: enabled).<br>
+         The sound effects make the simulation more realistic.
+       </li>
+       <li>
+         <B>Enable/disable the speech synthesis</B> (default: enabled).<br>
+         The speech synthesis is better to keep enabled, because it gives important advice to
+         the student during the simulation.
+       </li>
+       <li>
+         <B>Enable/disable the speech recognition</B> (default: disabled).<br>
+         The speech recognition allows to give voice commands to LabSim without input devices.
+         This feature is very important for people with reduced mobility capabilities.
+       </li>
+       <li>
+         <B>Enable/disable the detailed graphics</B> (default: enabled).
+         Devices with reduced GPU power may require to disable the detailed graphics for a better
+         immersive experience.
+       </li>
+     </ul>
+
+     <a name="USAGE_INTERACTION"><p class="title2">7.6 Interaction with the objects</p></a>
+     <p class="text">
+       The objects with which you can interact are highlighted on hover changing their color (<B>orange</B> or <B>red</B>)
+       or <B>size</B> (like the book and the TV).
+     </p>
+     <p align="center">
+       <img src="images/labsim_highlight.png" alt="Object selection" width="640" height="168">
+     </p>
+     <p class="text">
+       You can interact with the objects <U>only</U> by <B>clicking with the mouse</B> or <B>touching the screen</B> (tap).
+       The <B>single click</B> (tap) selects the object or starts an action.
+       In the case of the trash beaker, <B>double click</B> (double tap) empties automatically all glassware containing something.
+       <a href="#USAGE_TV">Several video tutorials</a> show this useful action.
+       To use an object, it must be selected by a mouse click (tap). The selection is highlighted by lifting or moving of
+       the object in the foreground (see reagents and analyte).
+     </p>
+     <table style="margin-left: auto; margin-right: auto;">
+       <tr>
+         <td style="padding: 8px;"><img class="border" src="images/labsim_objsel_01_en.jpg" alt="Test tube selection" width="320" height="180"></td>
+         <td style="padding: 8px;"><img class="border" src="images/labsim_objsel_02_en.jpg" alt="Reactive selection" width="320" height="180"></td>
+       </tr>
+       <tr>
+         <td style="padding: 8px;"><img class="border" src="images/labsim_objsel_03_en.jpg" alt="Stirrer selection" width="320" height="180"></td>
+         <td style="padding: 8px;"><img class="border" src="images/labsim_objsel_04_en.jpg" alt="Lighter selectiono" width="320" height="180"></td>
+       </tr>
+     </table>
+     <p class="text">
+       The objects can interact each other through actions given by:
+     </p>
+     <ul>
+       <li>
+         <B>Selecting the object 1 and clicking the object 2</B> (e.g. selection of the stirrer and click the test tube
+         to stir the content).
+       </li>
+       <li>
+        <B>Selecting the object, selecting the liquid reagent and clicking the reagent dropper</B>
+        (e.g. Selection of the test tube, selection of HCl 2M and click the reagent dropper).
+       </li>
+     <li>
+        <B>Selecting the object, selecting the solid reagent or the analyte and clicking the spatula</B>
+        (e.g. selection of the test tube, selection of NaNO<SUB>2</SUB> and click the spatula).
+     </li>
+     </ul>
+     <p class="title3">WARNING</p>
+     <p class="text">
+       When an action is not permitted, the speech synthesis warn you and, if it is disabled,
+       the action is just not completed without notice.
+     </p>
+
+     <a name="USAGE_GLASSWARE"><p class="title2">7.7 The glassware</p></a>
+     <p class="text">
+       The <B>glassware is always dirty</B> and needs to be rinsed with deionized water before the use.
+       <U>The simulator prevents the use of dirty glassware, avoiding the student from making mistakes in the analysis.</U>
+     </p>
+
+     <a name="USAGE_GLASSWARE_CLEAN"><p class="title3">7.7.1 Generic cleaning procedure</p></a>
+     <ul>
+       <li>Click the <B>glassware to clean</B> (e.g. a test tube) which will be then selected.</li>
+       <li>Click the <B>wash bottle</B>. Some water will be transferred to the glassware.</li>
+       <li>Click the <B>trash beaker</B>. The glassware content will be emptied.</li>
+     </ul>
+
+     <a name="USAGE_GLASSWARE_CLEAN_PASTEUR"><p class="title3">7.7.2 Dropper cleaning procedure</p></a>
+     <ul>
+       <li>Click an <B>empty test tube</B>. If you are not sure on its content, empty and wash it. The tube will be selected.</li>
+       <li>Click the <B>wash bottle</B>. About 1 mL of water will be transferred to the tube.</li>
+       <li>Click the <B>dropper</B> to select it.</li>
+       <li>Click the <B>test tube with the water</B>. The dropper will suck up the tube content.</li>
+       <li>Click the <B>trash beaker</B>. The content will be released.</li>
+     </ul>
+
+     <a name="USAGE_GLASSWARE_CLEAN_NICR"><p class="title3">7.7.3 Ni-Cr wire cleaning procedure:</p></a>
+     <ol>
+       <li>Turn on the <B>bunsen</B> setting the flame as oxidizing.</li>
+       <li>Put some <B>concentrated hydrochloric acid</B> in a test tube.</li>
+       <li>Click the <B>test tube with HCl</B>. The wire will be soaked in HCl.</li>
+       <li>Cliccare la provetta con HCl. Il filo verr&agrave; immerso nell'HCl.</li>
+       <li>Click the <B>bunsen</B>. The wire will be placed into the flame.</li>
+       <li>
+         Repeat the steps from 3 to 5 until the flame does not change more the color
+         (usually this operation must be repeated 3 times).
+       </li>
+     </ol>
+
+     <a name="USAGE_TRANSFER"><p class="title2">7.8 Transfer of substances</p></a>
+     <p class="text">
+       The simulator approximates the liquid and solid quantities according to
+       the action and the size of the glassware on which you act:
+     </p>
+     <br>
+     <table class="tabstd">
+       <tr>
+         <th class="thstd">Glassware</th>
+         <th class="thstd" align="center">Liquid</th>
+         <th class="thstd" align="center">Solid</th>
+       </tr>
+       <tr>
+         <td class="tdstd0">Test tube</td>
+         <td class="tdstd0" align="center">1 mL</td>
+         <td class="tdstd0" align="center">One spatula tip</td>
+       </tr>
+       <tr>
+         <td class="tdstd1">Beaker</td>
+         <td class="tdstd1" align="center">5 mL</td>
+         <td class="tdstd1" align="center">One spatula tip</td>
+       </tr>
+       <tr>
+         <td class="tdstd0">Watch glass</td>
+         <td class="tdstd0" align="center">1 mL</td>
+         <td class="tdstd0" align="center">One spatula</td>
+       </tr>
+       <tr>
+         <td class="tdstd1">Curcible</td>
+         <td class="tdstd1" align="center">5 mL</td>
+         <td class="tdstd1" align="center">One spatula</td>
+       </tr>
+       <tr>
+         <td class="tdstd0">Paper</td>
+         <td class="tdstd0" align="center">One drop</td>
+         <td class="tdstd0" align="center">-</td>
+       </tr>
+     </table>
+     <br>
+     <p class="text">
+       <B>Therefore, if you want to add 2 mL of water to a test tube, you need to repeat
+       the action twice because 1 mL is transferred at time.</B><br>
+       There are some reactions in which the quantities play an important role for their occurrence as:
+     </p>
+     <ul>
+       <li>
+         <B>Borate test</B> (you must add methanol at least twice so that is more than
+         sulfuric acid and can ignite).
+       </li>
+       <li>
+         <B>Nitrate test</B> (you must add FeSO<SUB>4</SUB> at least twice so that the solution
+         is enough concentrated to permit the formation of the brown ring).
+       </li>
+     </ul>
+
+
+     <!-------------------------->
+     <!--- Chemical reactions --->
+     <!-------------------------->
+
+     <a name="REACTIONS"><p class="title">8. Chemical reactions</p></a>
+     <p class="text">
+       LabSim is based on a database of about 3700 reactions that can occur between:
+     </p>
+     <ul>
+       <li><B>analyte + one reagent</B>;</li>
+       <li><B>analyte + two reagents</B>;</li>
+       <li><B>two reagents</B>;</li>
+       <li><B>reaction product + one reagent</B>;</li>
+       <li><B>reagent product + two reagents</B>.</li>
+     </ul>
+     <p class="text">
+       The physical aspects influencing the result of a reaction are:
+     </p>
+     <ul>
+       <li><B>Heat</B> given by:
+         <ul>
+           <li><B>water bath</B> (e.g. phosphate test, tests with TAA, dichromate paper, etc.);</li>
+           <li><B>electric heater</B> (e.g. calcination with con KHSO<SUB>4</SUB>).</li>
+         </ul>
+       </li>
+       <li><B>Time</B>.</li>
+     </ul>
+     <p class="title3">WARNING</p>
+     <p class="text">
+       In order to occur correctly a reaction, the <U>solution must be homogeneous</U> after
+       the addition of each reagent stirring the mixture.
+     </p>
+
+
+     <!--------------------------->
+     <!--- Supporting material --->
+     <!--------------------------->
+
+     <a name="SUPPMATERIAL"><p class="title">9. Supporting material</p></a>
+     <p class="text">
+       In this section you can download supporting documentation to use LabSim:
+       <ul>
+         <li>
+           LabSim presentation (PDF, <a href="docs/labsim_presentation_en.pdf">english</a>, <a href="docs/labsim_presentation_it.pdf">italian</a>).
+         </li>
+         <li>
+           Logical workflow for the correct execution of an unknown analysis (PDF, <a href="docs/analytical_workflow_en.pdf">english</a>, <a href="docs/analytical_workflow_it.pdf">italian</a>).
+         </li>
+         <li>
+           List of the speech commands (PDF, <a href="docs/speech_commands_en.pdf">english</a>, <a href="docs/speech_commands_it.pdf">italian</a>).
+         </li>
+       </ul>
+     </p>
+
+
+     <!----------------->
+     <!--- Copyright --->
+     <!----------------->
+
+     <a name="COPYRIGHT"><p class="title">10. Copyright and disclaimers</p></a>
+     <p class="text">
+       All trademarks and softwares directly or indirectly referred in this document, are copyrighted from legal owners.
+       <I>LabSim</I> is a freeware web application only if id distributed through servers of University of Milan.<br>
+       The Authors of this program accept no responsibility for hardware/software damages resulting from the use of this package.
+       No warranty is made about the software or its performance.
+     </p>
+
+     <p align="center">
+       <img src="images/labsim_logo.png" alt="LabSim" width="240" height="50">
+       <br><br>
+       is a web application develped in 2020-<span id="year1"></span><br>
+       by Alessandro Pedretti<br>
+       All rights reserved<br>
+       <br>
+       Alessandro Pedretti<br>
+       Dipartimento di Scienze Farmaceutiche<br>
+       Facolt&agrave; di Scienze del Farmaco<br>
+       Universit&agrave; degli Studi di Milano<br>
+       Via Luigi Mangiagalli, 25<br>
+       I-20133 Milano - Italy<br>
+       Tel. +39 02 503 19332<br>
+       E-Mail: <a href="mailto:info@vegazz.net?subject=LabSim">info@vegazz.net</a><br>
+       WWW: <a href="https://www.ddl.unimi.it/labsim/">https://www.ddl.unimi.it/labsim</a>
+     </p>
+     <br>
+
+
+     <!-------------->
+     <!--- Footer --->
+     <!-------------->
+
+     <hr>
+     <p id="copyright" align="center" style="font-size: 14px;">
+      &copy; 2020-<span id="year2"></span>,
+      <a href="mailto:info@vegazz.net?subject=LabSim">Alessandro Pedretti</a> -
+      <a href="https://www.unimi.it/" target="_blank">Universit&agrave; degli Studi di Milano</a><br>
+      <a href="https://www.ddl.unimi.it/cms/index.php?Privacy_and_cookies">Privacy and cookies</a><br>
+      <br>
+    </p>
+  </div>
+
+  <!------------------------>
+  <!--- Go to top button --->
+  <!------------------------>
+
+  <button id="BT_Top" onclick="BT_TopClick()" title="Go to top">&uarr;</button>
+
+  </body>
+</html>

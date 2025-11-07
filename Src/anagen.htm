@@ -1,0 +1,128 @@
+
+<!------------------------------------------->
+<!--      LabSim - Analysis generator      -->
+<!--  (c) 2020-2025, Alessandro Pedretti   -->
+<!------------------------------------------->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="description" content="Laboratory Simulator of Inorganic Qualitative Analysis">
+    <meta name="author"      content="Alessandro Pedretti">
+    <meta name="keywords"    content="analysis, chemistry, simulator, VR">
+
+    <title>LabSim - Analysis Generator</title>
+
+    <!-- Icons -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="css/docs.css?ver=LABSIM_VERSION">
+    <link rel="stylesheet" type="text/css" href="css/labsim.css?ver=LABSIM_VERSION">
+
+    <!-- Check the browser, language, etc -->
+
+    <script type="text/javascript" src="js/version.js?ver=LABSIM_VERSION"></script>
+    <script type="text/javascript" src="js/prefs.js?ver=LABSIM_VERSION"></script>
+
+    <!-- Code -->
+
+    <script type="text/javascript" src="dist/sql-wasm.js"></script>
+
+    <script type="text/javascript" src="js/globdef.js?ver=LABSIM_VERSION"></script>
+    <script type="text/javascript" src="js/lang.js?ver=LABSIM_VERSION" charset="ISO-8859-1"></script>
+    <script type="text/javascript" src="js/analysis.js?ver=LABSIM_VERSION" charset="ISO-8859-1"></script>
+    <script type="text/javascript" src="js/utils.js?ver=LABSIM_VERSION"></script>
+  </head>
+
+  <body onpageshow="ShowEvent()" bgcolor="#d9d9d9">
+
+    <!-- Splash screen -->
+
+    <div id="DivSplash" class="SplashScreen">
+      <div class="SplashAnim"></div>
+      <p id="TextSplash" align="center" style="font-size: 24px; font-family:'Arial'; margin-top: 150px;">Loading Analysis Generator...
+      <script>
+        SetTextSplash(Msg.AnaLoading);
+      </script>
+      </p>
+    </div>
+
+    <div class="pageback" id="pagecont" style="background: linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(148,187,233,1) 100%); display: none;">
+
+      <!-------------->
+      <!--- Header --->
+      <!-------------->
+
+      <table width="100%">
+        <tr>
+          <td>
+            <table><tr>
+              <td><img style="vertical-align: middle;" src="images/unimi_logo.svg" width="72" height="72" alt="Università degli Studi di Milano"></td>
+              <td>
+                <a href="https://www.unimi.it/" traget="_blank">Universit&agrave; degli Studi di Milano</a><br>
+                <a href="http://www.disfarm.unimi.it/" target="_blank">Dipartimento di Scienze Farmaceutiche</a>
+              </td>
+            </tr></table>
+          </td>
+          <td align="right">
+            <a href="index.htm">
+              <img style="vertical-align: middle;" src="images/labsim_logo.png">&nbsp;
+            </a>
+          </td>
+        </tr>
+      </table>
+      <hr style="margin-top: 0px;">
+
+      <div class="anapage" id="page">
+        <div id="title" style="font-size: 48px; font-weight: bold;">Analysis Generator</div>
+        <br>
+        <table width="100%">
+          <tr><td>
+            <label class="analabel" id="lbl_students">Number of students:</label><input class="anainputnum" type="number" id="str_students" value="10" min="1"><br><br>
+            <label class="analabel" id="lbl_soluble">Number of soluble substances:</label><input class="anainputnum" type="number" id="str_soluble" value="1" min="0"><br><br>
+            <label class="analabel" id="lbl_insoluble">Number of insoluble substances:</label><input class="anainputnum" type="number" id="str_insoluble" value="1" min="0"><br><br>
+            <br>
+          </tr></td>
+
+          <tr><td align="center">
+            <input class="anabutton" id="bt_generate" type="submit" value="Generate" onclick="GenerateClick()">
+          </tr></td>
+        </table>
+
+        <!-------------->
+        <!--- Footer --->
+        <!-------------->
+
+        <br><hr>
+        <p id="copyright" align="center" style="font-size: 14px;">
+          &copy; 2020-<span id="year2"></span>,
+          <a href="mailto:info@vegazz.net?subject=LabSim">Alessandro Pedretti</a> -
+          <a href="https://www.unimi.it/" target="_blank">Universit&agrave; degli Studi di Milano</a><br>
+          <a href="https://www.ddl.unimi.it/cms/index.php?Privacy_and_cookies">Dati personali e cookies</a><br>
+          <br>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
