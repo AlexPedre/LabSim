@@ -1,0 +1,1 @@
+<?php header('Location: /labsim/video.htm');?>
